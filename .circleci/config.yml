@@ -1,0 +1,14 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run:
+          name: The First Step
+          command: |
+            yarn export
+            git add .
+            git commit -m "[skip ci] Build tiddlywiki"
+            git push origin master
