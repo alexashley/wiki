@@ -1,0 +1,15 @@
+created: 20190420020105239
+modified: 20190420022537585
+tags: Node.js JavaScript proxy
+title: Quick scriptable proxy
+type: text/vnd.tiddlywiki
+
+```javascript
+const httpProxy = require('http-proxy');
+
+const port = process.env.PROXY_PORT || 8000;
+const proxy = httpProxy.createProxyServer({target:'http://10.211.55.3:8080/'});
+proxy.on('proxyReq', () => console.log('PROXYING'));
+console.log(`Starting proxy server on port ${port}`);
+proxy.listen(port);
+```
