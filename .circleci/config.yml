@@ -13,6 +13,8 @@ jobs:
           command: |
             yarn
             yarn export
+            git config --global user.email "alexashley15@gmail.com"
+            git config --global user.name "Alex Ashley"
             git add .
             git commit -m "[skip ci] Build tiddlywiki"
             git push origin master
