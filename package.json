@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-	"export": "tiddlywiki wiki --build index && mv wiki/output/static.html index.html",
+	"export": "tiddlywiki wiki --build index && mv wiki/output/index.html .",
   	"start": "tiddlywiki wiki --listen port=5555"
   },
   "dependencies": {
