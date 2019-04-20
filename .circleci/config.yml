@@ -9,7 +9,7 @@ jobs:
             - "de:04:2d:f5:eb:92:09:ea:18:b3:8c:39:65:85:7d:ae"
       - checkout
       - run:
-          name: The First Step
+          name: Build and push index
           command: |
             yarn
             yarn export
