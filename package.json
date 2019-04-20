@@ -7,9 +7,9 @@
   "private": true,
   "scripts": {
 	"export": "tiddlywiki wiki --build index && mv wiki/output/index.html .",
-  	"start": "tiddlywiki wiki --listen port=5555"
+  	"start": "tiddlywiki wiki --listen port=7777"
   },
   "dependencies": {
-    "tiddlywiki": "5.1.19"
+    "tiddlywiki": "alexashley/TiddlyWiki5#markdown-plugin"
   }
 }

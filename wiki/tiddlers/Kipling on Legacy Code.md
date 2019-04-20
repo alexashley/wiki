@@ -1,6 +1,6 @@
 > After me cometh a Builder. Tell him, I too have known.
 
-A few months ago, I was reading a [thread](https://news.ycombinator.com/item?id=18554272) on Hacker News about legacy code and one of the [commenters](https://news.ycombinator.com/item?id=18556744)  quoted from Rudyard Kipling's wonderful poem ["The Palace"](http://www.kiplingsociety.co.uk/poems_palace.htm).  
+A few months ago, I was reading a [thread ](https://news.ycombinator.com/item?id=18554272) on Hacker News about legacy code and one of the [commenters](https://news.ycombinator.com/item?id=18556744)  quoted from Rudyard Kipling's wonderful poem ["The Palace"](http://www.kiplingsociety.co.ukpoems_palace.htm).  
 
 The narrator of the poem is a stonemason,  who is building his own castle using the materials from the ruins of a long-forgotten palace. When he first stumbles upon the structure, he's immediately critical of the design and the implementation; however, as he excavates and begins to build his own palace, he starts to understand the intentions and dreams of the original builder. As the poem ends, the mason realizes that future generations will scorn his palace as well, just as he held the old palace in contempt. 
 
