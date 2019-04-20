@@ -1,4 +1,4 @@
-version: 2.0
+version: 2.1
 jobs:
   build:
     docker:
@@ -25,5 +25,5 @@ jobs:
           command: |
             git commit -m "[skip ci] Build tiddlywiki"
             git push origin master
-          when:
-            condition: git diff-index --quiet HEAD
+      - when:
+          condition: git diff-index --quiet HEAD
