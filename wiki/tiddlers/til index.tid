@@ -1,10 +1,10 @@
 created: 20190420040129523
-modified: 20190420040439228
+modified: 20190420052803550
 tags: 
-title: all til
+title: til index
 type: text/vnd.tiddlywiki
 
-random tidbits:
+Today I Learned:
 
 <ul>
 <$list filter="[tag[til]]">
