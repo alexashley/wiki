@@ -46,7 +46,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>alexashley.dev  — My personal wiki</title>
+<title>wiki.alexashley.dev  — My personal wiki</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 
@@ -185,8 +185,6 @@ Error message and password prompt
 
 <li>about</li>
 
-<li>all til</li>
-
 <li>Array.prototype context</li>
 
 <li>blog index</li>
@@ -200,6 +198,8 @@ Error message and password prompt
 <li>Find element causing width overflow</li>
 
 <li>Find unhandled promise rejections</li>
+
+<li>Kipling on Legacy Code</li>
 
 <li>Link dump</li>
 
@@ -218,6 +218,8 @@ Error message and password prompt
 <li>Set active Spring profile</li>
 
 <li>Switching to tiddlywiki</li>
+
+<li>til index</li>
 
 <li>Use Jest to mock constructor call</li>
 
@@ -9118,10 +9120,10 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20190420010600861" modified="20190420040904470" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20190420010600861" modified="20190420052819021" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>about
 [[blog index]]
-[[all til]]
+[[til index]]
 [tag[blog]]
 </pre>
 </div>
@@ -9745,13 +9747,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20190420010504947" modified="20190420010551529" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20190420010504947" modified="20190420045311519" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>My personal wiki</pre>
 </div>
-<div created="20190420010453200" modified="20190420010502842" title="$:/SiteTitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>alexashley.dev </pre>
+<div created="20190420010453200" modified="20190420045307397" title="$:/SiteTitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>wiki.alexashley.dev </pre>
 </div>
-<div list="about [[blog index]] [[all til]] [[Switching to tiddlywiki]] [[Verifying Events]]" title="$:/StoryList" revision="1" bag="default">
+<div list="about [[blog index]] [[til index]] [[Kipling on Legacy Code]] [[Switching to tiddlywiki]] [[Verifying Events]]" title="$:/StoryList" revision="1" bag="default">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json" revision="0" bag="default">
@@ -9913,18 +9915,6 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 
 For a more professional view, check out my [resume](/assets/resume.pdf) or [LinkedIn](https://www.linkedin.com/in/alex-h-ashley).</pre>
 </div>
-<div created="20190420040129523" modified="20190420040439228" tags="" title="all til" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>random tidbits:
-
-&lt;ul&gt;
-&lt;$list filter=&quot;[tag[til]]&quot;&gt;
-&lt;li&gt;
-&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;br&gt;
-&lt;$list filter=&quot;[all[current]tags[]![Reports]sort[]]&quot; template=&quot;$:/core/ui/TagTemplate&quot;&gt;&lt;/$list&gt;
-&lt;/li&gt;
-&lt;/$list&gt;
-&lt;/ul&gt;</pre>
-</div>
 <div created="20190420021505506" modified="20190420022402385" tags="Node.js JavaScript" title="Array.prototype context" type="text/x-markdown" revision="0" bag="default">
 <pre>This was driving me mad:
 
@@ -10005,6 +9995,17 @@ Apparently later versions of Node will make this failure a lot noisier, so this 
       throw err;
   });
 ```</pre>
+</div>
+<div created="20190420045400335" modified="20190420052933840" tags="blog [[legacy code]] poetry" title="Kipling on Legacy Code" type="text/x-markdown" revision="0" bag="default">
+<pre>&gt; After me cometh a Builder. Tell him, I too have known.
+
+A few months ago, I was reading a [thread](https://news.ycombinator.com/item?id=18554272) on Hacker News about legacy code and one of the [commenters](https://news.ycombinator.com/item?id=18556744)  quoted from Rudyard Kipling's wonderful poem [&quot;The Palace&quot;](http://www.kiplingsociety.co.uk/poems_palace.htm).  
+
+The narrator of the poem is a stonemason,  who is building his own castle using the materials from the ruins of a long-forgotten palace. When he first stumbles upon the structure, he's immediately critical of the design and the implementation; however, as he excavates and begins to build his own palace, he starts to understand the intentions and dreams of the original builder. As the poem ends, the mason realizes that future generations will scorn his palace as well, just as he held the old palace in contempt. 
+
+I can say that the poem came to me at the right time in my life. When I first read it, I was in the middle of a long project that involved rewriting large swathes of legacy code, which meant reading and understanding the original. Even worse, due to the nature of the project, it was necessary to create complicated workarounds and shims in order to maintain interoperability with the parts of the code that we weren't touching. Time and time again I found myself angry or frustrated with my predecessors because of their decisions or lack of knowledge. And yet, I can only assume they were doing their best, considering the knowledge they possessed, the requirements at hand, and the time available. Now I feel almost a camaraderie with them -- we both solved the same problem and I had the benefit of seeing another solution that had been working in production for years. By no means was the solution perfect, but it was actually deployed and provided immense value for both users and my employer. I can't even say that yet about the work that I've done -- it's still ongoing.
+
+Now as that project is coming to a close, I find myself reflecting on the last stanza in the poem. Personally, I attempt to be a professional software developer, which I define as the type of programmer who writes suites of useful, automated tests and who creates at least some form of documentation (READMEs, commit &amp; PR comments). Still, what bugs or failures did I introduce? Will future maintainers curse my name? I sure hope not, but I'll understand if they do. And I can only hope that they will try to understand me.</pre>
 </div>
 <div created="20190420014754260" modified="20190420022141665" tags="" title="Link dump" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>Misc links from trawling my personal Slack channel.
@@ -10281,6 +10282,18 @@ eval &quot;local k = redis.call('keys', '*'); for _, k in ipairs(k) do redis.cal
 - Google Keep
 
 But nothing really stuck -- each solution had its own downside. Either was too private and not shareable or not easily searchable/discoverable by my future self.  After hearing a lot of praise for [TiddlyWiki](https://tiddlywiki.com) I decided to give it a shot. Currently, I'm just a few hours in (mostly spent manually importing tiddlers from other channels); I'm really enjoying the straight forward tagging and editing. Here's hoping that this becomes my actual, personal knowledge base. </pre>
+</div>
+<div created="20190420040129523" modified="20190420052803550" tags="" title="til index" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Today I Learned:
+
+&lt;ul&gt;
+&lt;$list filter=&quot;[tag[til]]&quot;&gt;
+&lt;li&gt;
+&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;br&gt;
+&lt;$list filter=&quot;[all[current]tags[]![Reports]sort[]]&quot; template=&quot;$:/core/ui/TagTemplate&quot;&gt;&lt;/$list&gt;
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
 </div>
 <div created="20190420015512040" modified="20190420022526405" tags="Jest Node.js JavaScript til" title="Use Jest to mock constructor call" type="text/x-markdown" revision="0" bag="default">
 <pre>To mock a constructor with Jest, must use `mockImplementation` and return an object. Returning a string doesn't work, nor does using `mockReturnValue` and returning a function.
