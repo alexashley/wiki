@@ -4,10 +4,14 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "de:04:2d:f5:eb:92:09:ea:18:b3:8c:39:65:85:7d:ae"
       - checkout
       - run:
           name: The First Step
           command: |
+            yarn
             yarn export
             git add .
             git commit -m "[skip ci] Build tiddlywiki"
