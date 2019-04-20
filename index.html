@@ -191,6 +191,8 @@ Error message and password prompt
 
 <li>Capture i/o for a TCP port</li>
 
+<li>create ssh key in cwd</li>
+
 <li>Custom Moq matcher</li>
 
 <li>Dart 2 static analyzer settings</li>
@@ -9946,6 +9948,13 @@ TypeError: Cannot convert undefined or null to object
 </div>
 <div created="20190420020726046" modified="20190420022409708" tags="tcpflow til" title="Capture i/o for a TCP port" type="text/x-markdown" revision="0" bag="default">
 <pre>`tcpflow -c port 8001 -i lo`</pre>
+</div>
+<div created="20190420145108457" modified="20190420145255050" tags="ssh git til" title="create ssh key in cwd" type="text/x-markdown" revision="0" bag="default">
+<pre>For when I don't have my shell aliases handy:
+
+```
+ssh-keygen -t rsa -b 4096 -C &quot;foo&quot; -f .
+```</pre>
 </div>
 <div created="20190420012709911" modified="20190420022612656" tags="moq c# til" title="Custom Moq matcher" type="text/x-markdown" revision="0" bag="default">
 <pre>```csharp
