@@ -20,11 +20,6 @@ jobs:
             git config --global user.email "alexashley15@gmail.com"
             git config --global user.name "Alex Ashley"
             git add .
-      - when:
-          condition: git diff-index --quiet HEAD
-          steps:
-            - run:
-                name: Commit and push site
-                command: |
-                  git commit -m "[skip ci] Build tiddlywiki"
-                  git push origin master
+      - run:
+          name: Commit and push
+          command: .circleci/push-site.sh
