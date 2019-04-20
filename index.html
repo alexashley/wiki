@@ -183,6 +183,10 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>about</li>
+
+<li>all til</li>
+
 <li>Array.prototype context</li>
 
 <li>blog index</li>
@@ -235,7 +239,7 @@ Error message and password prompt
 <div created="20190420011829651" modified="20190420011836463" title="$:/config/Toolbar/ButtonClass" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>tc-btn-rounded</pre>
 </div>
-<div color="#bbb" created="20190420023744899" icon="$:/core/images/options-button" modified="20190420023746009" title="$:/ControlPanel" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div color="#bbb" created="20190420023744899" icon="$:/core/images/options-button" modified="20190420040908372" title="$:/ControlPanel" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>&lt;div class=&quot;tc-control-panel&quot;&gt;
 &lt;&lt;tabs &quot;[all[shadows+tiddlers]tag[$:/tags/ControlPanel]!has[draft.of]]&quot; &quot;$:/core/ui/ControlPanel/Info&quot;&gt;&gt;
 &lt;/div&gt;
@@ -9114,8 +9118,12 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20190420010600861" modified="20190420023739912" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>[[blog index]]</pre>
+<div created="20190420010600861" modified="20190420040904470" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>about
+[[blog index]]
+[[all til]]
+[tag[blog]]
+</pre>
 </div>
 <div title="$:/isEncrypted" revision="0" bag="default">
 <pre>no</pre>
@@ -9743,7 +9751,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20190420010453200" modified="20190420010502842" title="$:/SiteTitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>alexashley.dev </pre>
 </div>
-<div list="[[blog index]]" title="$:/StoryList" revision="1" bag="default">
+<div list="about [[blog index]] [[all til]] [[Switching to tiddlywiki]] [[Verifying Events]]" title="$:/StoryList" revision="1" bag="default">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json" revision="0" bag="default">
@@ -9899,6 +9907,23 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 </div>
 <div created="20190420012207149" modified="20190420012604293" title="$:/view" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>classic</pre>
+</div>
+<div created="20190420035459734" modified="20190420035837113" tags="" title="about" type="text/x-markdown" revision="0" bag="default">
+<pre>I'm a software developer with experience in Node.js,  Kotlin, C# and a smattering of other languages. This is my personal website and wiki, where I try to catalog what I know, mainly for my own benefit. 
+
+For a more professional view, check out my [resume](/assets/resume.pdf) or [LinkedIn](https://www.linkedin.com/in/alex-h-ashley).</pre>
+</div>
+<div created="20190420040129523" modified="20190420040439228" tags="" title="all til" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>random tidbits:
+
+&lt;ul&gt;
+&lt;$list filter=&quot;[tag[til]]&quot;&gt;
+&lt;li&gt;
+&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;br&gt;
+&lt;$list filter=&quot;[all[current]tags[]![Reports]sort[]]&quot; template=&quot;$:/core/ui/TagTemplate&quot;&gt;&lt;/$list&gt;
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
 </div>
 <div created="20190420021505506" modified="20190420022402385" tags="Node.js JavaScript" title="Array.prototype context" type="text/x-markdown" revision="0" bag="default">
 <pre>This was driving me mad:
